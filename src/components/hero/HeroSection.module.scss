@@ -1,0 +1,75 @@
+$white: #ffffff;
+
+.hero {
+  padding: 0 2.5rem;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+
+    .title {
+      font-size: 35px;
+      color: #04433b;
+      font-weight: 800;
+    }
+
+    .btn {
+      background-color: #00b686;
+      color: $white;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  }
+
+  .background {
+    position: relative;
+
+    .image {
+      border-radius: 0.75rem;
+    }
+
+    .wrapper {
+      background: rgba(255, 255, 255, 0.7);
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 40%;
+
+      .proposal {
+        color: #000000;
+        font-size: 48px;
+        line-height: 48px;
+        font-weight: 900;
+      }
+    }
+
+    .weSales {
+      position: absolute;
+      top: 75%;
+      left: 1.5rem;
+      background-color: $white;
+      padding: 1rem 1.5rem;
+      border-radius: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.75rem;
+
+      .image {
+        height: 77px;
+        width: 77px;
+      }
+
+      span {
+        font-size: 2.5rem;
+        font-weight: 300;
+      }
+    }
+  }
+}
