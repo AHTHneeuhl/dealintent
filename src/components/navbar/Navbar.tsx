@@ -1,7 +1,6 @@
 "use client";
 
-import Image from "next/image";
-import { Avatar, Typography } from "antd";
+import { Avatar, Typography, Image } from "antd";
 import { BsQuestionCircle, BsSearch } from "react-icons/bs";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { IoNotificationsOutline } from "react-icons/io5";
@@ -25,11 +24,23 @@ const Navbar: React.FC = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        <Image src="/logo.png" alt="Dealintent Logo" width={38} height={38} />
+        <Image
+          src="/logo.png"
+          alt="Dealintent Logo"
+          width={38}
+          height={38}
+          preview={false}
+        />
       </div>
       <div className={styles.options}>
         <BsSearch size={24} />
-        <Image src="/mail-inbox.png" alt="Mail Inbox" width={24} height={24} />
+        <Image
+          src="/mail-inbox.png"
+          alt="Mail Inbox"
+          width={24}
+          height={24}
+          preview={false}
+        />
         <IoNotificationsOutline size={24} />
         <BsQuestionCircle size={24} />
         <Avatar src="/avatar.png" alt="User Profile Picture" size={45} />
