@@ -1,0 +1,27 @@
+.project-scope-recap {
+  padding: 0 2.5rem;
+  margin: 7rem 0;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+      font-size: 25px;
+      font-weight: 700;
+      color: #233735;
+    }
+
+    .mutual-action-plan {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .content {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+}
