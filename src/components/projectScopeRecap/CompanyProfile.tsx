@@ -1,6 +1,7 @@
 import { Typography, Image as Img } from "antd";
-import styles from "./CompanyProfile.module.scss";
 import Image from "next/image";
+import { HiDotsVertical } from "react-icons/hi";
+import styles from "./CompanyProfile.module.scss";
 
 const CompanyProfile: React.FC = () => {
   return (
@@ -9,6 +10,7 @@ const CompanyProfile: React.FC = () => {
         <Typography.Title className={styles.title}>
           Company Profile
         </Typography.Title>
+        <HiDotsVertical size={20} className={styles["three-dots"]} />
         <div className={styles.options}>
           <Image
             src="/icons/download.png"

@@ -27,6 +27,7 @@ $breakpoint-large: 1024px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 1rem;
 
     .title {
       font-size: 25px;
@@ -46,6 +47,54 @@ $breakpoint-large: 1024px;
     .mutual-action-plan {
       display: flex;
       flex-direction: column;
+
+      .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .heading {
+          font-size: 14px;
+          color: #7b8786;
+
+          @include respond-to($breakpoint-small) {
+            font-size: 10px;
+          }
+        }
+
+        .percent {
+          font-size: 14px;
+          color: #00b686;
+          font-weight: 800;
+
+          @include respond-to($breakpoint-small) {
+            font-size: 10px;
+          }
+        }
+      }
+
+      .progress {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+
+        .item {
+          background: #d3d7d7;
+          width: 8px;
+          height: 5px;
+
+          &:first-child {
+            background-color: #00b686;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+          }
+
+          &:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+          }
+        }
+      }
     }
   }
 
