@@ -44,6 +44,19 @@ $breakpoint-large: 1024px;
       align-items: center;
       gap: 0.75rem;
       color: $border-color;
+
+      @include respond-to($breakpoint-small) {
+        display: none;
+      }
+    }
+
+    .three-dots {
+      display: none;
+
+      @include respond-to($breakpoint-small) {
+        display: block;
+        color: #657372;
+      }
     }
   }
 
