@@ -1,6 +1,27 @@
+// Break-points
+$breakpoint-small: 480px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1024px;
+
+@mixin respond-to($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
 .project-scope-recap {
   padding: 0 2.5rem;
   margin: 7rem 0;
+
+  @include respond-to($breakpoint-small) {
+    padding: 0 1rem;
+    margin: 4rem 0;
+  }
+
+  @include respond-to($breakpoint-medium) {
+    padding: 0 1.5rem;
+    margin: 5rem 0;
+  }
 
   .header {
     display: flex;
@@ -11,6 +32,15 @@
       font-size: 25px;
       font-weight: 700;
       color: #233735;
+
+      @include respond-to($breakpoint-medium) {
+        font-size: 20px;
+        line-height: 20px;
+      }
+
+      @include respond-to($breakpoint-small) {
+        font-size: 16px;
+      }
     }
 
     .mutual-action-plan {

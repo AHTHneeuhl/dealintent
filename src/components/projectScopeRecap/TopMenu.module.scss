@@ -1,6 +1,15 @@
+// Break-points
+$breakpoint-small: 480px;
+
+@mixin respond-to($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
 .topMenu {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
   border-bottom: 1px solid #e9ebeb;
@@ -21,6 +30,15 @@
 
     &:last-child {
       margin-left: auto;
+
+      @include respond-to($breakpoint-small) {
+        display: none;
+      }
+    }
+
+    @include respond-to($breakpoint-small) {
+      padding: 0.5rem;
+      font-size: 14px;
     }
   }
 }
